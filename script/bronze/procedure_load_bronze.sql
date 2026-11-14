@@ -61,8 +61,8 @@ BEGIN
 	start_time := clock_timestamp();
 	RAISE NOTICE'>>>Truncating Tables:bronze.crm_prd_info>>>>';
 	    TRUNCATE TABLE bronze.crm_prd_info;
-		
 	RAISE NOTICE '>>>Inserting Data into : bronze.crm_prd_info>>>>';
+----Copy csv data into SQL (remember to update the file name and file location in below query)
 		COPY bronze.crm_prd_info
 		FROM 'C:/PostgresData/prd_info.csv'
 		DELIMITER ','
